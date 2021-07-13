@@ -5,16 +5,14 @@
 //     <span id="text">Абракадабра!</span>
 
 const inputEl = document.getElementById('font-size-control');
-inputEl.getAttribute('min, 0');
-inputEl.getAttribute('max, 100');
-
-
 const textEl = document.getElementById('text');
 
 
 
 inputEl.addEventListener('input', onRangeChange);
 
-function onRangeChange(event) {
-    console.log('Меня двигают');
-}
+function onRangeChange() {
+    const size = inputEl.value;
+    textEl.style.fontSize = size + "px";
+};
+
